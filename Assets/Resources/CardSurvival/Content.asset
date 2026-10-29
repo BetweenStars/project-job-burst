@@ -1,0 +1,841 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f076bdab727e4346a739155e1a7d067, type: 3}
+  m_Name: Content
+  m_EditorClassIdentifier: CardSurvival::CardSurvival.GameContent
+  balance:
+    duration: 1800
+    castleHP: 3000
+    magicInterval: 10
+    soldierInterval: 4
+    archerInterval: 6
+    initialGold: 150
+    handLimit: 8
+    orderLimit: 5
+    armyLimit: 80
+    heroLimit: 12
+    enemyLimit: 1000
+    maxCommandLevel: 16
+    battlefieldRadius: 24
+    spawnRadius: 22
+    bossTimes:
+    - 120
+    - 300
+    - 480
+    - 660
+    - 840
+    - 1020
+    - 1200
+    - 1380
+    - 1560
+    waveTimes:
+    - 0
+    - 300
+    - 600
+    - 1200
+    - 1500
+    - 1800
+    spawnRates:
+    - 1
+    - 2
+    - 3
+    - 6
+    - 8
+    - 12
+  units:
+  - kind: 0
+    name: "\uADFC\uC811\uBCD1"
+    art: soldier
+    hp: 100
+    damage: 12
+    interval: 1
+    speed: 1.65
+    range: 1.4
+    gold: 0
+    xp: 0
+  - kind: 1
+    name: "\uAD81\uC218"
+    art: archer
+    hp: 65
+    damage: 16
+    interval: 1
+    speed: 1.5
+    range: 5
+    gold: 0
+    xp: 0
+  - kind: 2
+    name: "\uD30C\uD2F0 \uC804\uC704"
+    art: soldier
+    hp: 200
+    damage: 26
+    interval: 1
+    speed: 1.8
+    range: 1.5
+    gold: 0
+    xp: 0
+  - kind: 3
+    name: "\uD68C\uBCF5\uC0AC"
+    art: heal
+    hp: 110
+    damage: 10
+    interval: 1
+    speed: 1.8
+    range: 4
+    gold: 0
+    xp: 0
+  - kind: 4
+    name: "\uC601\uC6C5"
+    art: hero
+    hp: 450
+    damage: 48
+    interval: 1
+    speed: 2
+    range: 1.8
+    gold: 0
+    xp: 0
+  - kind: 5
+    name: "\uACE0\uBE14\uB9B0"
+    art: goblin
+    hp: 40
+    damage: 8
+    interval: 1
+    speed: 1.05
+    range: 1.35
+    gold: 3
+    xp: 1
+  - kind: 6
+    name: "\uC624\uD06C"
+    art: orc
+    hp: 160
+    damage: 16
+    interval: 1
+    speed: 0.68
+    range: 1.6
+    gold: 10
+    xp: 4
+  - kind: 7
+    name: "\uC0AC\uC774\uD074\uB86D\uC2A4"
+    art: cyclops
+    hp: 1800
+    damage: 45
+    interval: 1
+    speed: 0.6
+    range: 2.6
+    gold: 120
+    xp: 60
+  cards:
+  - id: guild.party.basic
+    name: "\uC6D0\uC815 \uD30C\uD2F0"
+    description: "\uC804\uC704 1\uBA85\uACFC \uAD81\uC218 2\uBA85\n\uD30C\uD2F0\uC6D0\uC740
+      \uD568\uAED8 \uC774\uB3D9\uD569\uB2C8\uB2E4."
+    art: ranger
+    kind: 0
+    grade: -1
+    cost: 90
+    seconds: 12
+    power: 1
+  - id: magic.attack.burst
+    name: "\uBD88\uAF43 \uD3ED\uBC1C"
+    description: "\uBC94\uC704 \uB0B4 \uC801\uC5D0\uAC8C 60 \uD53C\uD574\n\uD074\uB9AD
+      \uD6C4 \uC804\uC7A5\uC5D0 \uC2DC\uC804\uD569\uB2C8\uB2E4."
+    art: fire
+    kind: 2
+    grade: -1
+    cost: 0
+    seconds: 0
+    power: 1
+  - id: magic.support.field
+    name: "\uC0DD\uBA85\uC758 \uC815\uC6D0"
+    description: "6\uCD08 \uB3D9\uC548 \uC544\uAD70 \uCCB4\uB825 \uD68C\uBCF5\n\uCD08\uB2F9
+      \uCD5C\uB300 \uCCB4\uB825\uC758 5%"
+    art: heal
+    kind: 3
+    grade: -1
+    cost: 0
+    seconds: 0
+    power: 1
+  - id: guild.hero.0.0
+    name: "\uACAC\uC2B5 \uAE30\uC0AC \uB9AC\uC544"
+    description: "D\uAE09 \uC601\uC6C5 \xB7 \uADFC\uC811 \uC804\uD22C\n\uC18C\uD658
+      \uD6C4 \uC790\uB3D9\uC73C\uB85C \uAD50\uC804\uD569\uB2C8\uB2E4."
+    art: hero
+    kind: 1
+    grade: 0
+    cost: 140
+    seconds: 18
+    power: 1
+  - id: guild.hero.0.1
+    name: "\uACAC\uC2B5 \uC0AC\uB0E5\uAFBC \uB85C\uC6EC"
+    description: "D\uAE09 \uC601\uC6C5 \xB7 \uC6D0\uAC70\uB9AC \uC804\uD22C\n\uC18C\uD658
+      \uD6C4 \uC790\uB3D9\uC73C\uB85C \uAD50\uC804\uD569\uB2C8\uB2E4."
+    art: ranger
+    kind: 1
+    grade: 0
+    cost: 140
+    seconds: 18
+    power: 1
+  - id: guild.hero.1.0
+    name: "\uC219\uB828 \uAE30\uC0AC \uB9AC\uC544"
+    description: "C\uAE09 \uC601\uC6C5 \xB7 \uADFC\uC811 \uC804\uD22C\n\uC18C\uD658
+      \uD6C4 \uC790\uB3D9\uC73C\uB85C \uAD50\uC804\uD569\uB2C8\uB2E4."
+    art: hero
+    kind: 1
+    grade: 1
+    cost: 230
+    seconds: 24
+    power: 1.4
+  - id: guild.hero.1.1
+    name: "\uC219\uB828 \uC0AC\uB0E5\uAFBC \uB85C\uC6EC"
+    description: "C\uAE09 \uC601\uC6C5 \xB7 \uC6D0\uAC70\uB9AC \uC804\uD22C\n\uC18C\uD658
+      \uD6C4 \uC790\uB3D9\uC73C\uB85C \uAD50\uC804\uD569\uB2C8\uB2E4."
+    art: ranger
+    kind: 1
+    grade: 1
+    cost: 230
+    seconds: 24
+    power: 1.4
+  - id: guild.hero.2.0
+    name: "\uC815\uC608 \uAE30\uC0AC \uB9AC\uC544"
+    description: "B\uAE09 \uC601\uC6C5 \xB7 \uADFC\uC811 \uC804\uD22C\n\uC18C\uD658
+      \uD6C4 \uC790\uB3D9\uC73C\uB85C \uAD50\uC804\uD569\uB2C8\uB2E4."
+    art: hero
+    kind: 1
+    grade: 2
+    cost: 380
+    seconds: 32
+    power: 2
+  - id: guild.hero.2.1
+    name: "\uC815\uC608 \uC0AC\uB0E5\uAFBC \uB85C\uC6EC"
+    description: "B\uAE09 \uC601\uC6C5 \xB7 \uC6D0\uAC70\uB9AC \uC804\uD22C\n\uC18C\uD658
+      \uD6C4 \uC790\uB3D9\uC73C\uB85C \uAD50\uC804\uD569\uB2C8\uB2E4."
+    art: ranger
+    kind: 1
+    grade: 2
+    cost: 380
+    seconds: 32
+    power: 2
+  - id: guild.hero.3.0
+    name: "\uBA85\uC608 \uAE30\uC0AC \uB9AC\uC544"
+    description: "A\uAE09 \uC601\uC6C5 \xB7 \uADFC\uC811 \uC804\uD22C\n\uC18C\uD658
+      \uD6C4 \uC790\uB3D9\uC73C\uB85C \uAD50\uC804\uD569\uB2C8\uB2E4."
+    art: hero
+    kind: 1
+    grade: 3
+    cost: 620
+    seconds: 42
+    power: 2.9
+  - id: guild.hero.3.1
+    name: "\uBA85\uC608 \uC0AC\uB0E5\uAFBC \uB85C\uC6EC"
+    description: "A\uAE09 \uC601\uC6C5 \xB7 \uC6D0\uAC70\uB9AC \uC804\uD22C\n\uC18C\uD658
+      \uD6C4 \uC790\uB3D9\uC73C\uB85C \uAD50\uC804\uD569\uB2C8\uB2E4."
+    art: ranger
+    kind: 1
+    grade: 3
+    cost: 620
+    seconds: 42
+    power: 2.9
+  - id: guild.hero.4.0
+    name: "\uC804\uC124 \uAE30\uC0AC \uB9AC\uC544"
+    description: "S\uAE09 \uC601\uC6C5 \xB7 \uADFC\uC811 \uC804\uD22C\n\uC18C\uD658
+      \uD6C4 \uC790\uB3D9\uC73C\uB85C \uAD50\uC804\uD569\uB2C8\uB2E4."
+    art: hero
+    kind: 1
+    grade: 4
+    cost: 1000
+    seconds: 55
+    power: 4.2
+  - id: guild.hero.4.1
+    name: "\uC804\uC124 \uC0AC\uB0E5\uAFBC \uB85C\uC6EC"
+    description: "S\uAE09 \uC601\uC6C5 \xB7 \uC6D0\uAC70\uB9AC \uC804\uD22C\n\uC18C\uD658
+      \uD6C4 \uC790\uB3D9\uC73C\uB85C \uAD50\uC804\uD569\uB2C8\uB2E4."
+    art: ranger
+    kind: 1
+    grade: 4
+    cost: 1000
+    seconds: 55
+    power: 4.2
+  tech:
+  - id: tech.0.0
+    name: "\uADFC\uAC70\uB9AC"
+    description: "\uADFC\uC811\uBCD1 \uCCB4\uB825 +20%"
+    facility: 0
+    local: 0
+    parent: -1
+    level: 2
+    cost: 1
+    exclusive: -1
+    terminal: 0
+  - id: tech.0.1
+    name: "\uBC29\uD328"
+    description: "\uADFC\uC811\uBCD1 \uBC1B\uB294 \uD53C\uD574 -20%"
+    facility: 0
+    local: 1
+    parent: 0
+    level: 4
+    cost: 2
+    exclusive: 4
+    terminal: 0
+  - id: tech.0.2
+    name: "\uCCA0\uBCBD"
+    description: "6\uCD08\uB9C8\uB2E4 \uCD5C\uB300 \uCCB4\uB825 20% \uBCF4\uD638\uB9C9"
+    facility: 0
+    local: 2
+    parent: 1
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.0.3
+    name: "\uBC18\uACA9"
+    description: "\uD53C\uACA9 \uC2DC \uC8FC\uBCC0\uC5D0 \uACF5\uACA9\uB825 40% \uBC18\uACA9
+      (1\uCD08)"
+    facility: 0
+    local: 3
+    parent: 1
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.0.4
+    name: "\uAC80\uC0AC"
+    description: "\uADFC\uC811\uBCD1 \uACF5\uACA9\uC18D\uB3C4 +25%"
+    facility: 0
+    local: 4
+    parent: 0
+    level: 4
+    cost: 2
+    exclusive: 1
+    terminal: 0
+  - id: tech.0.5
+    name: "\uB09C\uACA9"
+    description: "\uC138 \uBC88\uC9F8 \uAE30\uBCF8 \uACF5\uACA9\uC5D0 \uCD94\uAC00
+      \uD0C0\uACA9"
+    facility: 0
+    local: 5
+    parent: 4
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.0.6
+    name: "\uAD11\uC5ED\uBCA0\uAE30"
+    description: "\uC8FC\uBCC0 \uCD5C\uB300 4\uBA85\uC5D0 60% \uCD94\uAC00 \uD53C\uD574"
+    facility: 0
+    local: 6
+    parent: 4
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.0.7
+    name: "\uC6D0\uAC70\uB9AC"
+    description: "\uAD81\uC218\uB97C 6\uCD08\uB9C8\uB2E4 \uC790\uB3D9\uC0DD\uC0B0"
+    facility: 0
+    local: 7
+    parent: -1
+    level: 2
+    cost: 1
+    exclusive: -1
+    terminal: 0
+  - id: tech.0.8
+    name: "\uC815\uBC00"
+    description: "\uAD81\uC218 \uC0AC\uAC70\uB9AC +25%"
+    facility: 0
+    local: 8
+    parent: 7
+    level: 4
+    cost: 2
+    exclusive: 11
+    terminal: 0
+  - id: tech.0.9
+    name: "\uAD00\uD1B5"
+    description: "\uD654\uC0B4\uC774 \uCD5C\uB300 3\uBA85 \uAD00\uD1B5"
+    facility: 0
+    local: 9
+    parent: 8
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.0.10
+    name: "\uC800\uACA9"
+    description: "\uB192\uC740 \uCCB4\uB825 \uBE44\uC728 \uC6B0\uC120 \xB7 \uCCAB
+      \uD53C\uD574 +100% \xB7 \uACF5\uACA9 \uAC04\uACA9 +30%"
+    facility: 0
+    local: 10
+    parent: 8
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.0.11
+    name: "\uC18D\uC0AC"
+    description: "\uAD81\uC218 \uACF5\uACA9 \uAC04\uACA9 -20%"
+    facility: 0
+    local: 11
+    parent: 7
+    level: 4
+    cost: 2
+    exclusive: 8
+    terminal: 0
+  - id: tech.0.12
+    name: "\uB2E4\uC911\uC0AC\uACA9"
+    description: "\uC11C\uB85C \uB2E4\uB978 3\uBA85\uC5D0\uAC8C 60% \uD654\uC0B4"
+    facility: 0
+    local: 12
+    parent: 11
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.0.13
+    name: "\uD3ED\uBC1C\uD654\uC0B4"
+    description: "\uBA85\uC911 \uC704\uCE58 \uBC18\uACBD 1.2\uC5D0 40% \uD53C\uD574"
+    facility: 0
+    local: 13
+    parent: 11
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.0.14
+    name: "\uBCD1\uCC38 \uC815\uBE44"
+    description: "\uAD70 \uC0DD\uC0B0 \uAC04\uACA9 -10%"
+    facility: 0
+    local: 14
+    parent: -1
+    level: 2
+    cost: 1
+    exclusive: -1
+    terminal: 0
+  - id: tech.0.15
+    name: "\uB300\uADDC\uBAA8 \uD3B8\uC81C"
+    description: "\uAD70 \uC778\uAD6C \uC0C1\uD55C +40"
+    facility: 0
+    local: 15
+    parent: 14
+    level: 5
+    cost: 2
+    exclusive: -1
+    terminal: 0
+  - id: tech.1.0
+    name: "\uD30C\uD2F0"
+    description: "\uC0C8 \uD30C\uD2F0\uC758 \uAD81\uC218 1\uBA85\uC744 \uD68C\uBCF5\uC0AC\uB85C
+      \uAD50\uCCB4"
+    facility: 1
+    local: 0
+    parent: -1
+    level: 2
+    cost: 1
+    exclusive: -1
+    terminal: 0
+  - id: tech.1.1
+    name: "\uC218\uD638\uB300"
+    description: "\uD30C\uD2F0 \uC8FC\uBCC0 \uC544\uAD70 \uBC1B\uB294 \uD53C\uD574
+      -10%"
+    facility: 1
+    local: 1
+    parent: 16
+    level: 4
+    cost: 2
+    exclusive: 4
+    terminal: 0
+  - id: tech.1.2
+    name: "\uC9C4\uD615"
+    description: "\uD30C\uD2F0\uC6D0 2\uBA85 \uC774\uC0C1 \uC778\uC811 \uC2DC \uACF5\uACA9\uC18D\uB3C4
+      +25%"
+    facility: 1
+    local: 2
+    parent: 17
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.1.3
+    name: "\uAD6C\uD638"
+    description: "\uD30C\uD2F0\uC6D0 \uC0AC\uB9DD \uC2DC \uC8FC\uBCC0 \uC544\uAD70
+      \uCCB4\uB825 20% \uD68C\uBCF5"
+    facility: 1
+    local: 3
+    parent: 17
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.1.4
+    name: "\uC720\uACA9\uB300"
+    description: "\uD30C\uD2F0 \uC774\uB3D9\uC18D\uB3C4 +20% \xB7 \uACF5\uACA9 \uAC04\uACA9
+      -15%"
+    facility: 1
+    local: 4
+    parent: 16
+    level: 4
+    cost: 2
+    exclusive: 1
+    terminal: 0
+  - id: tech.1.5
+    name: "\uC9D1\uC911\uC0AC\uACA9"
+    description: "\uD30C\uD2F0 \uACF5\uC720 \uD45C\uC801\uC5D0 \uD53C\uD574 +35%"
+    facility: 1
+    local: 5
+    parent: 20
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.1.6
+    name: "\uC5F0\uC1C4\uD1A0\uBC8C"
+    description: "\uD30C\uD2F0 \uCC98\uCE58\uB9C8\uB2E4 3\uCD08 \uAC00\uC18D \xB7
+      \uCD5C\uB300 3\uC911\uCCA9"
+    facility: 1
+    local: 6
+    parent: 20
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.1.7
+    name: "\uC601\uC6C5"
+    description: "\uC601\uC6C5 \uCCB4\uB825\xB7\uD53C\uD574 +20%"
+    facility: 1
+    local: 7
+    parent: -1
+    level: 2
+    cost: 1
+    exclusive: -1
+    terminal: 0
+  - id: tech.1.8
+    name: "\uACB0\uD22C\uAC00"
+    description: "\uC601\uC6C5\uC740 \uC624\uD06C \uC6B0\uC120 \xB7 \uB2E8\uC77C
+      \uD53C\uD574 +35%"
+    facility: 1
+    local: 8
+    parent: 23
+    level: 4
+    cost: 2
+    exclusive: 11
+    terminal: 0
+  - id: tech.1.9
+    name: "\uCC98\uD615"
+    description: "\uCCB4\uB825 20% \uC774\uD558 \uC77C\uBC18 \uC801 \uCC98\uD615
+      (2\uCD08) \xB7 \uBCF4\uC2A4 \uC81C\uC678"
+    facility: 1
+    local: 9
+    parent: 24
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.1.10
+    name: "\uD761\uD608"
+    description: "\uC601\uC6C5 \uC9C1\uC811 \uD53C\uD574\uC758 10% \uD68C\uBCF5"
+    facility: 1
+    local: 10
+    parent: 24
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.1.11
+    name: "\uC804\uC7C1\uC601\uC6C5"
+    description: "\uC601\uC6C5\uC774 4\uCD08\uB9C8\uB2E4 \uD68C\uC804 \uACF5\uACA9"
+    facility: 1
+    local: 11
+    parent: 23
+    level: 4
+    cost: 2
+    exclusive: 8
+    terminal: 0
+  - id: tech.1.12
+    name: "\uB300\uD68C\uC804"
+    description: "\uD68C\uC804 \uACF5\uACA9 \uBC18\uACBD +50% \xB7 \uCD5C\uB300 20\uBA85"
+    facility: 1
+    local: 12
+    parent: 27
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.1.13
+    name: "\uC9C0\uD718"
+    description: "\uC8FC\uBCC0 \uAD70 \uACF5\uACA9\uC18D\uB3C4 +25%"
+    facility: 1
+    local: 13
+    parent: 27
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.1.14
+    name: "\uC2E0\uC18D \uC758\uB8B0"
+    description: "\uC0C8 \uC758\uB8B0 \uC2DC\uAC04 -10%"
+    facility: 1
+    local: 14
+    parent: -1
+    level: 2
+    cost: 1
+    exclusive: -1
+    terminal: 0
+  - id: tech.1.15
+    name: "\uAE38\uB4DC \uD655\uC7A5"
+    description: "\uBAA8\uD5D8\uAC00 \uC0C1\uD55C +6"
+    facility: 1
+    local: 15
+    parent: 30
+    level: 5
+    cost: 2
+    exclusive: -1
+    terminal: 0
+  - id: tech.2.0
+    name: "\uACF5\uACA9 \uB9C8\uBC95"
+    description: "\uACF5\uACA9 \uB9C8\uBC95 \uBC18\uACBD +15%"
+    facility: 2
+    local: 0
+    parent: -1
+    level: 2
+    cost: 1
+    exclusive: -1
+    terminal: 0
+  - id: tech.2.1
+    name: "\uD654\uC5FC"
+    description: "\uD3ED\uBC1C \uD6C4 4\uCD08 \uD654\uC5FC \uC9C0\uB300"
+    facility: 2
+    local: 1
+    parent: 32
+    level: 4
+    cost: 2
+    exclusive: 4
+    terminal: 0
+  - id: tech.2.2
+    name: "\uC5C5\uD654"
+    description: "\uD654\uC5FC \uC9C0\uB300\uC5D0\uC11C \uD654\uC0C1 \uCD5C\uB300
+      3\uC911\uCCA9"
+    facility: 2
+    local: 2
+    parent: 33
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.2.3
+    name: "\uD655\uC0B0"
+    description: "\uD654\uC0C1 \uC801 \uC0AC\uB9DD \uC2DC \uADFC\uCC98 2\uBA85\uC5D0\uAC8C
+      \uC804\uD30C"
+    facility: 2
+    local: 3
+    parent: 33
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.2.4
+    name: "\uBC88\uAC1C"
+    description: "\uD3ED\uBC1C \uD6C4 \uC8FC\uBCC0 3\uBA85 \uC5F0\uC1C4 \uD0C0\uACA9"
+    facility: 2
+    local: 4
+    parent: 32
+    level: 4
+    cost: 2
+    exclusive: 1
+    terminal: 0
+  - id: tech.2.5
+    name: "\uACFC\uCDA9\uC804"
+    description: "\uC911\uC2EC 40% \uBC18\uACBD\uC5D0\uC11C \uC9C1\uC811 \uD53C\uD574
+      +100%"
+    facility: 2
+    local: 5
+    parent: 36
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.2.6
+    name: "\uC5F0\uC1C4\uD3ED\uD48D"
+    description: "\uC5F0\uC1C4 \uCD5C\uB300 8\uBA85 \xB7 \uC810\uD504\uB9C8\uB2E4
+      \uD53C\uD574 -10%"
+    facility: 2
+    local: 6
+    parent: 36
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.2.7
+    name: "\uC9C0\uC6D0 \uB9C8\uBC95"
+    description: "\uC9C0\uC6D0 \uB9C8\uBC95 \uBC18\uACBD +15%"
+    facility: 2
+    local: 7
+    parent: -1
+    level: 2
+    cost: 1
+    exclusive: -1
+    terminal: 0
+  - id: tech.2.8
+    name: "\uD68C\uBCF5"
+    description: "\uD68C\uBCF5\uC7A5 \uCE58\uC720\uB7C9 +30%"
+    facility: 2
+    local: 8
+    parent: 39
+    level: 4
+    cost: 2
+    exclusive: 11
+    terminal: 0
+  - id: tech.2.9
+    name: "\uBCF4\uD638\uB9C9"
+    description: "\uCD08\uACFC \uD68C\uBCF5\uC744 \uCCB4\uB825 20%\uAE4C\uC9C0 3\uCD08
+      \uBCF4\uD638\uB9C9\uC73C\uB85C"
+    facility: 2
+    local: 9
+    parent: 40
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.2.10
+    name: "\uC7AC\uC0DD"
+    description: "\uD68C\uBCF5\uC7A5 \uC774\uD0C8 \uD6C4 3\uCD08\uAC04 \uC808\uBC18
+      \uD68C\uBCF5"
+    facility: 2
+    local: 10
+    parent: 40
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.2.11
+    name: "\uC804\uC220\uC7A5"
+    description: "\uD68C\uBCF5\uC7A5 \uC548 \uC544\uAD70 \uACF5\uACA9\uC18D\uB3C4
+      +20%"
+    facility: 2
+    local: 11
+    parent: 39
+    level: 4
+    cost: 2
+    exclusive: 8
+    terminal: 0
+  - id: tech.2.12
+    name: "\uAC00\uC18D"
+    description: "\uC804\uC220\uC7A5 \uC774\uB3D9\uC18D\uB3C4 +30% \xB7 \uACF5\uACA9\uC18D\uB3C4
+      +40%"
+    facility: 2
+    local: 12
+    parent: 43
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.2.13
+    name: "\uBE59\uACB0\uC9C4"
+    description: "\uC9C0\uC6D0\uC7A5 \uC801 \uC774\uB3D9\uC18D\uB3C4 -30% \xB7 2\uCD08
+      \uCCB4\uB958 \uC2DC \uAE30\uC808"
+    facility: 2
+    local: 13
+    parent: 43
+    level: 10
+    cost: 3
+    exclusive: -1
+    terminal: 1
+  - id: tech.2.14
+    name: "\uB9C8\uB825 \uC21C\uD658"
+    description: "\uB2E4\uC74C \uB9C8\uBC95 \uCE74\uB4DC \uC9C0\uAE09 \uAC04\uACA9
+      -10%"
+    facility: 2
+    local: 14
+    parent: -1
+    level: 2
+    cost: 1
+    exclusive: -1
+    terminal: 0
+  - id: tech.2.15
+    name: "\uBC94\uC704 \uC5F0\uAD6C"
+    description: "\uACF5\uACA9\xB7\uC9C0\uC6D0 \uB9C8\uBC95 \uBC18\uACBD +15%"
+    facility: 2
+    local: 15
+    parent: 46
+    level: 5
+    cost: 2
+    exclusive: -1
+    terminal: 0
+  augments:
+  - id: aug.0
+    name: "\uB9C8\uB825 \uBCF4\uC874"
+    description: "\uB9C8\uBC95 \uC0AC\uC6A9 \uC2DC 15% \uD655\uB960\uB85C \uCE74\uB4DC
+      \uC720\uC9C0\n\uAC19\uC740 \uCE74\uB4DC\uB294 0.5\uCD08 \uD6C4 \uB2E4\uC2DC
+      \uC0AC\uC6A9"
+    art: heal
+    facility: 2
+  - id: aug.1
+    name: "\uC720\uC5F0\uD55C \uBC29\uD328"
+    description: "\uADFC\uC811 \uAD70\uC774 \uC9C1\uC811 \uACF5\uACA9\uC744 15% \uD655\uB960\uB85C
+      \uD68C\uD53C"
+    art: soldier
+    facility: 0
+  - id: aug.2
+    name: "\uC5F0\uC18D \uD0C0\uACA9"
+    description: "\uADFC\uC811 \uAD70 \uAE30\uBCF8 \uACF5\uACA9 \uC2DC 15% \uD655\uB960\uB85C
+      \uCD94\uAC00 \uD0C0\uACA9"
+    art: soldier
+    facility: 0
+  - id: aug.3
+    name: "\uD295\uAE30\uB294 \uD654\uC0B4"
+    description: "\uAD70 \uD654\uC0B4\uC774 \uB2E4\uB978 \uC801 1\uBA85\uC5D0\uAC8C
+      40% \uD53C\uD574\uB85C \uD295\uAE40"
+    art: soldier
+    facility: 0
+  - id: aug.4
+    name: "\uB9C8\uC9C0\uB9C9 \uC120\uBB3C"
+    description: "\uAD70 \uC0AC\uB9DD \uC2DC \uC8FC\uBCC0 \uC544\uAD70\uC5D0\uAC8C
+      3\uCD08 \uACF5\uACA9\uC18D\uB3C4 +15%"
+    art: soldier
+    facility: 0
+  - id: aug.5
+    name: "\uC608\uBE44 \uBCD1\uB825"
+    description: "\uAD70 \uC0DD\uC0B0 5\uD68C\uB9C8\uB2E4 \uBCD1\uB825 1\uBA85 \uCD94\uAC00\n\uC778\uAD6C
+      \uC0C1\uD55C\uC744 \uC9C0\uD0B5\uB2C8\uB2E4"
+    art: soldier
+    facility: 0
+  - id: aug.6
+    name: "\uB3D9\uB8CC\uC758 \uC720\uB300"
+    description: "\uD30C\uD2F0 \uD53C\uD574 20%\uB97C \uC0B4\uC544 \uC788\uB294 \uB3D9\uB8CC\uC5D0\uAC8C
+      \uBD84\uC0B0"
+    art: hero
+    facility: 1
+  - id: aug.7
+    name: "\uAD6C\uC870 \uC694\uCCAD"
+    description: "\uD30C\uD2F0 \uC804\uBA78 \uC2DC \uB2E4\uC74C \uD30C\uD2F0 \uC758\uB8B0
+      \uC2DC\uAC04 50% \uD560\uC778"
+    art: hero
+    facility: 1
+  - id: aug.8
+    name: "\uBD88\uAD74\uC758 \uC601\uC6C5"
+    description: "\uC601\uC6C5\uC774 \uC0AC\uB9DD \uC9C1\uC804 \uD55C \uBC88 \uCCB4\uB825
+      30%\uB85C \uC0DD\uC874"
+    art: hero
+    facility: 1
+  - id: aug.9
+    name: "\uC601\uC6C5\uC758 \uAE30\uC138"
+    description: "\uC601\uC6C5 10\uCC98\uCE58\uB9C8\uB2E4 \uB2E4\uC74C \uACF5\uACA9\uC5D0
+      \uCDA9\uACA9\uD30C"
+    art: hero
+    facility: 1
+  - id: aug.10
+    name: "\uC5F0\uC18D \uC8FC\uBB38"
+    description: "\uAC19\uC740 \uACF5\uACA9 \uB9C8\uBC95\uC744 5\uCD08 \uC548\uC5D0
+      \uC4F0\uBA74 \uD53C\uD574 +25%\n\uCD5C\uB300 2\uC911\uCCA9"
+    art: heal
+    facility: 2
+  - id: aug.11
+    name: "\uB0A8\uACA8\uC9C4 \uC628\uAE30"
+    description: "\uC9C0\uC6D0\uC7A5 \uC885\uB8CC \uC2DC \uBC94\uC704 \uB0B4 \uC544\uAD70\uC5D0
+      3\uCD08 \uBCF4\uD638\uB9C9"
+    art: heal
+    facility: 2

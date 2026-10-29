@@ -1,0 +1,1 @@
+Accelerated deterministic rule simulation; not a real-time 30-minute manual playthrough. Wall seconds: 16.4599287

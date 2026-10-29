@@ -1,0 +1,31 @@
+#pragma kernel MoveUnits
+#include "GpuUnitData.hlsl"
+
+RWStructuredBuffer<UnitData> _Units;
+uint _UnitCount;
+float _DeltaTime;
+float _MoveSpeed;
+float2 _HalfArea;
+
+[numthreads(64, 1, 1)]
+void MoveUnits(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= _UnitCount) return;
+
+    UnitData unit = _Units[id.x];
+    unit.position += unit.direction * _MoveSpeed * _DeltaTime;
+    float2 limit = _HalfArea - unit.size;
+
+    if (abs(unit.position.x) > limit.x)
+    {
+        unit.direction.x = -sign(unit.position.x) * abs(unit.direction.x);
+        unit.position.x = clamp(unit.position.x, -limit.x, limit.x);
+    }
+    if (abs(unit.position.y) > limit.y)
+    {
+        unit.direction.y = -sign(unit.position.y) * abs(unit.direction.y);
+        unit.position.y = clamp(unit.position.y, -limit.y, limit.y);
+    }
+
+    _Units[id.x] = unit;
+}

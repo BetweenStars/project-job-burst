@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bba599aed2241018e1c2d92ee327eb, type: 3}
+  m_Name: TestEnemyData
+  m_EditorClassIdentifier: Assembly-CSharp::UnitData
+  unitId: 
+  displayName: "\uACE0\uBE14\uB9B0"
+  team: 1
+  attackType: 0
+  baseHp: 5
+  moveSpeed: 1
+  atkPower: 0
+  defPower: 0
+  atkDatas: []
+  atkRange: 1
+  atkSpeed: 1
+  atkTiming: 0.301
+  targetRange: 10
+  radius: 0.5
+  visuals:
+    idleSprite: {fileID: 21300000, guid: fe7b98b443dd9463b899c37402e92040, type: 3}
+    startAttackSprite: {fileID: -6484566652900242381, guid: 9372e3af6f39f47ca8ff3c0ffd2e3ddf, type: 3}
+    attackSprite: {fileID: 4834830498472108953, guid: 9372e3af6f39f47ca8ff3c0ffd2e3ddf, type: 3}
+    knockbackSprite: {fileID: -1467907416720998693, guid: 9372e3af6f39f47ca8ff3c0ffd2e3ddf, type: 3}

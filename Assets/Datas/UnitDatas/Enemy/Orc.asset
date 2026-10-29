@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94bba599aed2241018e1c2d92ee327eb, type: 3}
+  m_Name: Orc
+  m_EditorClassIdentifier: Assembly-CSharp::UnitData
+  unitId: 1002
+  displayName: "\uC624\uD06C"
+  team: 1
+  baseHp: 10
+  moveSpeed: 0.1
+  atkPower: 3
+  defPower: 3
+  atkRange: 0.4
+  atkSpeed: 0.5
+  atkTiming: 0.696
+  targetRange: 1
+  separationPower: 0
+  visuals:
+    idleSprite: {fileID: 21300000, guid: 14b61965057714379bae9a89de9b7fc4, type: 3}
+    startAttackSprite: {fileID: 0}
+    attackSprite: {fileID: 0}
+    knockbackSprite: {fileID: 0}

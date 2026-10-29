@@ -1,0 +1,7 @@
+build,phase,game_seconds,castle_hp,kills,boss_kills,level,army,adventurers,enemies,deck,pool_misses
+army-melee,Lost,890.1062,0,2239,4,14,5,7,46,0,0
+army-ranged,Lost,1637.122,0,7091,8,16,64,4,135,0,0
+guild-party,Lost,440.7659,0,695,2,6,9,8,71,0,0
+guild-hero,Won,1800.031,2991.893,8873,9,16,68,12,131,0,0
+magic-attack,Lost,634.0687,0,1249,3,10,2,2,59,0,0
+magic-support,Lost,660.6622,0,1338,3,10,3,6,56,0,0
